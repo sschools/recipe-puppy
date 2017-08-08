@@ -22,13 +22,26 @@ input {
 button {
   width: 100px;
   height: 40px;
-  background-color: #0c9b15;
-  color: #ffffff;
+  background-color: #0b1c9b;
+  color: #e2d6aa;
   font-size: 20px;
-  border: 1px solid black;
+  border: 1px solid #e2d6aa;
   border-radius: 5px;
+}
+
+button:hover {
+  background-color: #0c9b15;
 }
 
 input, button {
   margin: 15px 30px;
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+figure {
+  flex-basis: 24%;
 }
