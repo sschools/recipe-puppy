@@ -17,7 +17,13 @@ function getFood() {
 function buildHtml(recipes) {
   let html = "";
   for (let recipe of recipes.results) {
-    html += `<figure><img src="${recipe.thumbnail}"/>
+    let imgUrl = "";
+    if (recipe.thumbnail) {
+      imgUrl = recipe.thumbnail;
+    } else {
+      imgUrl = "http://lorempixel.com/120/120";
+    }
+    html += `<figure><img src="${imgUrl}"/>
       <figcaption><a href="${recipe.href}">${recipe.title}</a></figcaption>
       </figure>
       `;
